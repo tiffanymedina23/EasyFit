@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "152060334723",
+    "firebase_url": "https://easyfit-v1.firebaseio.com",
+    "project_id": "easyfit-v1",
+    "storage_bucket": "easyfit-v1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:152060334723:android:e9229f006a4a58285a41b6",
+        "android_client_info": {
+          "package_name": "com.example.easyfit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "152060334723-g1vudfgc9cfjbc2nms71cooj817nb6av.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbqS4wAWLH_HZOB98vLvXHCwikPq40paw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "152060334723-g1vudfgc9cfjbc2nms71cooj817nb6av.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
