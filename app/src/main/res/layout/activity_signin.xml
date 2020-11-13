@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/login"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_main">
-
+    android:background="@drawable/background_main"
+    tools:context=".SigninActivity">
 
     <EditText
         android:id="@+id/ETEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ETName"
+        android:layout_below="@+id/imageView3"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="97dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="103dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="100dp"
         android:layout_weight="1"
         android:ems="10"
         android:hint="Email"
@@ -30,7 +30,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="97dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="103dp"
         android:layout_weight="1"
         android:ems="10"
@@ -38,7 +38,7 @@
         android:inputType="textPersonName" />
 
     <Button
-        android:id="@+id/btnRegister"
+        android:id="@+id/btnSignIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ETPassword"
@@ -47,47 +47,30 @@
         android:layout_marginStart="159dp"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="164dp"
-        android:text="Sign Up" />
+        android:text="Sign In" />
 
     <Button
-        android:id="@+id/alreadyLogin"
-        android:layout_width="196dp"
+        android:id="@+id/newAccount"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="105dp"
-        android:layout_marginEnd="108dp"
-        android:layout_marginBottom="204dp"
+        android:layout_marginStart="119dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginBottom="84dp"
         android:background="#FFFFFF"
-        android:text="Already have an account? Login!"
+        android:text="Don't have an account? Sign Up!"
         android:textSize="12sp" />
 
-    <EditText
-        android:id="@+id/ETName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="135dp"
-        android:layout_marginEnd="100dp"
-        android:ems="10"
-        android:hint="Name"
-        android:inputType="textPersonName" />
-
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="219dp"
-        android:layout_above="@+id/ETName"
-        android:layout_alignParentStart="true"
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="158dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="-1dp"
-        android:layout_marginEnd="265dp"
-        android:layout_marginBottom="-83dp"
+        android:layout_marginTop="2dp"
+        android:backgroundTint="@color/common_google_signin_btn_text_light_disabled"
+        android:backgroundTintMode="multiply"
         app:srcCompat="@drawable/easy_fit1" />
+
 </RelativeLayout>
