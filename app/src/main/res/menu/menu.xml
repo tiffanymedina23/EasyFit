@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dietMenuItem"
+        android:title="Meal Plan" />
+
+    <item
+        android:id="@+id/exerciseMenuItem"
+        android:title="Exercise Plan" />
+
+    <item
+        android:id="@+id/settingsMenuItem"
+        android:title="Edit Profile / Settings" />
+</menu>

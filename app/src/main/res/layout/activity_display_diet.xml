@@ -5,12 +5,17 @@
     android:layout_height="fill_parent"
     android:orientation="vertical">
 
+    <Toolbar
+        android:id="@+id/diet_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:title="Diet Plan" />
+
     <TextView
-        android:id="@+id/mainTextView"
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="This is the Main Activity."
+        android:text="This is the Display Diet Activity."
         android:layout_centerInParent="true"/>
-
 
 </RelativeLayout>
