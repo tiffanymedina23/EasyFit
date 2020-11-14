@@ -1,6 +1,8 @@
 package com.example.easyfit;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -21,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
 
         //Variables
         Animation topAnimation, bottomAnimation, slideLeft;
-        TextView sp_tv;
         Button welcome;
         ProgressBar loading;
         ImageView log_in;
@@ -33,12 +34,31 @@ public class MainActivity extends AppCompatActivity {
         // FULLSCREEN MODE
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.main_layout);
 
         //Animations
         topAnimation = AnimationUtils.loadAnimation(this,R.anim.slide_left);
         bottomAnimation = AnimationUtils.loadAnimation(this,R.anim.bottom_animation);
-        slideLeft =  AnimationUtils.loadAnimation(this,R.anim.slide_left);
+      //  slideLeft =  AnimationUtils.loadAnimation(this,R.anim.slide_left);
+
+
+        welcome = findViewById(R.id.welcome_bttn);
+        log_in = findViewById(R.id.easy_fit);
+        loading = findViewById(R.id.progress_circular);
+
+
+        log_in.setAnimation(topAnimation);
+        welcome.setAnimation(bottomAnimation);
+
+        welcome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loading.setVisibility(View.VISIBLE);
+                Intent intent = new Intent(v.getContext(),LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
 
