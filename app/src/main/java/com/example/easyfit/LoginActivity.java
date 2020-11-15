@@ -57,6 +57,7 @@ public class LoginActivity extends AppCompatActivity {
                                        if(task.isSuccessful()){
                                            Toast.makeText(LoginActivity.this, "A verification has been sent to your email", Toast.LENGTH_SHORT).show();
                                            startActivity(new Intent(LoginActivity.this, SigninActivity.class));
+
                                        }
                                        else {
 
