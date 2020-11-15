@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main_layout);
 
         //Animations
-        topAnimation = AnimationUtils.loadAnimation(this,R.anim.slide_left);
+        topAnimation = AnimationUtils.loadAnimation(this,R.anim.top_animation);
         bottomAnimation = AnimationUtils.loadAnimation(this,R.anim.bottom_animation);
       //  slideLeft =  AnimationUtils.loadAnimation(this,R.anim.slide_left);
 
