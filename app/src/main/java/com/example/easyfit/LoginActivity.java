@@ -50,10 +50,21 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                Toast.makeText(LoginActivity.this, "Registration Complete", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(LoginActivity.this, SigninActivity.class));
-                            } else {
-                                Toast.makeText(LoginActivity.this, "Could Not Register", Toast.LENGTH_SHORT).show();
+                                //send email verification
+                               firebaseAuth.getCurrentUser().sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                   @Override
+                                   public void onComplete(@NonNull Task<Void> task) {
+                                       if(task.isSuccessful()){
+                                           Toast.makeText(LoginActivity.this, "A verification has been sent to your email", Toast.LENGTH_SHORT).show();
+                                           startActivity(new Intent(LoginActivity.this, SigninActivity.class));
+                                       }
+                                       else {
+
+                                           Toast.makeText(LoginActivity.this, "Could Not Register", Toast.LENGTH_SHORT).show();
+                                             }
+                                   }
+                               });
+
                             }
 
                         }
