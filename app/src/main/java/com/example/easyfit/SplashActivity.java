@@ -3,31 +3,21 @@ package com.example.easyfit;
 import android.content.Intent;
 import android.os.Bundle;
 
-import android.view.View;
+import android.os.Handler;
 
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 
-import android.view.WindowManager;
 import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.TextView;
-
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
-public class MainActivity extends AppCompatActivity {
+public class SplashActivity extends AppCompatActivity {
+    private final int SPLASH_DISPLAY_LENGTH = 1600;
 
         //Variables
         Animation topAnimation, bottomAnimation, slideLeft;
@@ -43,10 +33,21 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // FULLSCREEN MODE
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_layout);
+        setContentView(R.layout.splash_screen);
 
+        new Handler().postDelayed(new Runnable(){
+            @Override
+            public void run() {
+                /* Create an Intent that will start the Menu-Activity. */
+                Intent mainIntent = new Intent(SplashActivity.this,SigninActivity.class);
+                SplashActivity.this.startActivity(mainIntent);
+                SplashActivity.this.finish();
+            }
+        }, SPLASH_DISPLAY_LENGTH);
+
+        /*
         //Animations
         topAnimation = AnimationUtils.loadAnimation(this,R.anim.top_animation);
         bottomAnimation = AnimationUtils.loadAnimation(this,R.anim.bottom_animation);
@@ -65,13 +66,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 loading.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(v.getContext(),LoginActivity.class);
+                Intent intent = new Intent(v.getContext(), SignupActivity.class);
                 startActivity(intent);
             }
         });
 
+         */
+
     }
 
+    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -79,6 +83,8 @@ public class MainActivity extends AppCompatActivity {
 
         return true;
     }
+    */
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

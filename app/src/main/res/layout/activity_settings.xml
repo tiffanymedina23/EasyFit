@@ -3,84 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
 
     <Toolbar
         android:id="@+id/settings_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
-        android:title="Edit Profile / Settings" />
-
-    <TextView
-        android:id="@+id/emailTextView"
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        android:text="Email:"
-        android:layout_below="@id/settings_toolbar"
-        android:textSize="20sp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"/>
-
-    <EditText
-        android:id="@+id/emailEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:textSize="20sp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:layout_below="@id/settings_toolbar"
-        android:layout_toRightOf="@id/emailTextView"
-        android:layout_marginTop="10dp"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="20dp"/>
-
-    <TextView
-        android:id="@+id/passwordTextView"
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        android:text="Password:"
-        android:layout_below="@id/emailTextView"
-        android:textSize="20sp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"/>
-
-    <EditText
-        android:id="@+id/passwordEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:layout_below="@id/emailTextView"
-        android:layout_toRightOf="@id/passwordTextView"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="20dp"/>
-
-    <TextView
-        android:id="@+id/nameTextView"
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        android:text="Name:"
-        android:layout_below="@id/passwordTextView"
-        android:textSize="20sp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"/>
-
-    <EditText
-        android:id="@+id/nameEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:layout_below="@id/passwordTextView"
-        android:layout_toRightOf="@id/nameTextView"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="20dp"/>
+        android:title="EDIT PROFILE" />
 
     <TextView
         android:id="@+id/ageTextView"
         android:layout_width="100dp"
         android:layout_height="30dp"
         android:text="Age:"
-        android:layout_below="@id/nameTextView"
+        android:layout_below="@id/settings_toolbar"
         android:textSize="20sp"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"/>
@@ -90,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:ems="4"
-        android:layout_below="@id/nameTextView"
+        android:layout_below="@id/settings_toolbar"
         android:layout_toRightOf="@id/ageTextView"/>
 
     <TextView
@@ -98,11 +35,11 @@
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:text="years"
-        android:layout_below="@id/nameTextView"
+        android:layout_below="@id/settings_toolbar"
         android:textSize="20sp"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@id/ageEditText"/>
+        android:layout_toEndOf="@id/ageEditText"/>
 
     <TextView
         android:id="@+id/sexTextView"
@@ -264,6 +201,15 @@
         android:text="SAVE CHANGES"
         android:textSize="20sp"
         android:layout_below="@id/goalTextView"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/signOutButton"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="SIGN OUT"
+        android:textSize="20sp"
+        android:layout_below="@id/saveChangesButton"
         android:layout_centerHorizontal="true"/>
 
 

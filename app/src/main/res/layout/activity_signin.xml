@@ -7,21 +7,28 @@
     android:background="@color/colorPrimary"
     >
 
+    <ImageView
+        android:id="@+id/IVLogo"
+        android:layout_width="match_parent"
+        android:layout_height="158dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/common_google_signin_btn_text_light_disabled"
+        android:backgroundTintMode="multiply"
+        app:srcCompat="@drawable/easy_fit1" />
+
     <EditText
         android:id="@+id/ETEmail"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView3"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/IVLogo"
         android:layout_marginTop="50dp"
-        android:layout_marginEnd="14dp"
         android:layout_weight="1"
         android:background="@drawable/field_bg"
         android:drawableLeft="@drawable/icon_simple_gmail"
         android:ems="10"
         android:hint="Email"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         android:padding="30dp" />
 
     <EditText
@@ -29,10 +36,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ETEmail"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="20dp"
         android:layout_weight="1"
         android:background="@drawable/field_bg"
         android:drawableLeft="@drawable/icon_feather_unlock"
@@ -43,41 +47,26 @@
 
     <Button
         android:id="@+id/btnSignIn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="159dp"
+        android:layout_height="73dp"
         android:layout_below="@+id/ETPassword"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="159dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="164dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/login_btn" />
 
-    <Button
+    <TextView
         android:id="@+id/newAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="119dp"
-        android:layout_marginEnd="118dp"
-        android:layout_marginBottom="97dp"
+        android:layout_below="@+id/btnSignIn"
         android:background="@color/colorPrimary"
-        android:text="Don't have an account? Sign Up!"
+        android:layout_marginTop="30dp"
+        android:text="@string/don_t_have_an_account_sign_up"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="12sp" />
+        android:textSize="18sp"
+        android:clickable="true"/>
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="match_parent"
-        android:layout_height="158dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="2dp"
-        android:backgroundTint="@color/common_google_signin_btn_text_light_disabled"
-        android:backgroundTintMode="multiply"
-        app:srcCompat="@drawable/easy_fit1" />
+
 
 </RelativeLayout>

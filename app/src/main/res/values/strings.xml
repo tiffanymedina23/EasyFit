@@ -23,4 +23,6 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="don_t_have_an_account_sign_up">DON\'T HAVE AN ACCOUNT? <u>SIGN UP</u></string>
+    <string name="already_have_an_account_login">ALREADY HAVE AN ACCOUNT? <u>LOGIN</u></string>
 </resources>

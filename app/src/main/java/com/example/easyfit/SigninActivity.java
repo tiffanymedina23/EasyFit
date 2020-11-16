@@ -1,6 +1,5 @@
 package com.example.easyfit;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,18 +7,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class SigninActivity extends AppCompatActivity {
     private EditText Email;
     private EditText Password;
     private Button SignIn;
-    private Button NewAccount;
+    private TextView NewAccount;
     private FirebaseAuth firebaseAuth;
 
     @Override
@@ -35,7 +32,7 @@ public class SigninActivity extends AppCompatActivity {
         SignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(SigninActivity.this, MainActivity.class));
+                startActivity(new Intent(SigninActivity.this, HomeActivity.class));
 
                 if (validate()) {
                     //uploads data to the database on button click
@@ -50,7 +47,7 @@ public class SigninActivity extends AppCompatActivity {
         NewAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(SigninActivity.this, LoginActivity.class));
+                startActivity(new Intent(SigninActivity.this, SignupActivity.class));
             }
         });
 
@@ -60,7 +57,7 @@ public class SigninActivity extends AppCompatActivity {
         Email = (EditText) findViewById(R.id.ETEmail);
         Password = (EditText) findViewById(R.id.ETPassword);
         SignIn = (Button) findViewById(R.id.btnSignIn);
-        NewAccount = (Button) findViewById(R.id.newAccount);
+        NewAccount = (TextView) findViewById(R.id.newAccount);
     }
 
     private Boolean validate() {

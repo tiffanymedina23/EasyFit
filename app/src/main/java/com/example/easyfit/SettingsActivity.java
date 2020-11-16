@@ -1,18 +1,15 @@
 package com.example.easyfit;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.NumberPicker;
 import android.widget.Toolbar;
 
 public class SettingsActivity extends AppCompatActivity {
-    Button saveChangesButton;
+    Button saveChangesButton, signOutButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,17 +26,25 @@ public class SettingsActivity extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                 finish();
             }
         });
 
         saveChangesButton = (Button)findViewById(R.id.saveChangesButton);
-
         saveChangesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                finish();
+            }
+        });
+
+        signOutButton = (Button)findViewById(R.id.signOutButton);
+        signOutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), SigninActivity.class));
                 finish();
             }
         });

@@ -3,13 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
 
     <Toolbar
         android:id="@+id/diet_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
-        android:title="Diet Plan" />
+        android:title="DIET PLAN" />
 
     <TextView
         android:id="@+id/textView3"
