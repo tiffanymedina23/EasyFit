@@ -20,7 +20,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class SignupActivity extends AppCompatActivity {
-
     private EditText username;
     private EditText email;
     private EditText password;

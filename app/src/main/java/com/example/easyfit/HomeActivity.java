@@ -6,9 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class HomeActivity extends AppCompatActivity {
+    TextView greetingTextView;
     Button dietButton, exerciseButton, settingsButton;
 
     @Override
@@ -16,12 +18,15 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        greetingTextView = (TextView) findViewById(R.id.welcome);
         dietButton = (Button) findViewById(R.id.dietButton);
         exerciseButton = (Button) findViewById(R.id.exerciseButton);
         settingsButton = (Button) findViewById(R.id.settingsButton);
 
         Bundle bundle = getIntent().getExtras();
-        String test = bundle.getString("username");
+        String username = bundle.getString("username");
+
+        greetingTextView.setText("Welcome, " + username + "!");
 
 
         dietButton.setOnClickListener(new View.OnClickListener() {
