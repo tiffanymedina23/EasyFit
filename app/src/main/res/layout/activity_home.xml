@@ -22,7 +22,7 @@
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/archivo_black"
         android:text="WELCOME, *username*!"
-        android:textColor="#000000"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="25sp"
         android:textStyle="bold" />
 

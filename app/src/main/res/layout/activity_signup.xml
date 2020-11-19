@@ -8,10 +8,10 @@
 
     <ImageView
         android:id="@+id/signupLogo"
-        android:layout_width="176dp"
-        android:layout_height="128dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="-20dp"
         android:src="@drawable/easy_fit" />
 
     <TextView
@@ -19,6 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_below="@+id/signupLogo"
+        android:layout_marginTop="-10dp"
         android:layout_marginLeft="30dp"
         android:fontFamily="@font/archivo_black"
         android:text="HEY THERE,"
@@ -32,30 +33,19 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/hey_there"
         android:layout_marginLeft="60dp"
+        android:layout_marginTop="-10dp"
         android:fontFamily="@font/archivo_black"
         android:text="LET'S GET FIT!"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="35dp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/signup_to_continue"
-        android:layout_below="@id/lets_get_fit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:fontFamily="@font/bree_serif"
-        android:text="Signup to continue"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="20dp"
-        android:textStyle="bold" />
-
-
     <EditText
         android:id="@+id/ETName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/signup_to_continue"
+        android:layout_below="@id/lets_get_fit"
+        android:layout_marginTop="30dp"
         android:background="@drawable/field_bg"
         android:drawableLeft="@drawable/icon_feather_user"
         android:ems="10"

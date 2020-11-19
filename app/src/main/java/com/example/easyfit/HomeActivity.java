@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class HomeActivity extends AppCompatActivity {
     Button dietButton, exerciseButton, settingsButton;
@@ -18,6 +19,10 @@ public class HomeActivity extends AppCompatActivity {
         dietButton = (Button) findViewById(R.id.dietButton);
         exerciseButton = (Button) findViewById(R.id.exerciseButton);
         settingsButton = (Button) findViewById(R.id.settingsButton);
+
+        Bundle bundle = getIntent().getExtras();
+        String test = bundle.getString("username");
+
 
         dietButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,6 +44,8 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(new Intent(HomeActivity.this, SettingsActivity.class));
             }
         });
+
+
 
     }
 }
