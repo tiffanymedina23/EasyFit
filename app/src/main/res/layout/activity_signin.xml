@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    >
+    android:background="@color/colorPrimary">
 
     <ImageView
         android:id="@+id/IVLogo"
@@ -18,24 +17,24 @@
         app:srcCompat="@drawable/easy_fit1" />
 
     <EditText
-        android:id="@+id/ETEmail"
+        android:id="@+id/ETName"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/IVLogo"
         android:layout_marginTop="50dp"
         android:layout_weight="1"
         android:background="@drawable/field_bg"
-        android:drawableLeft="@drawable/icon_simple_gmail"
+        android:drawableLeft="@drawable/icon_feather_user"
         android:ems="10"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
+        android:hint="Username"
+        android:inputType="textPersonName"
         android:padding="30dp" />
 
     <EditText
         android:id="@+id/ETPassword"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ETEmail"
+        android:layout_below="@+id/ETName"
         android:layout_marginTop="20dp"
         android:layout_weight="1"
         android:background="@drawable/field_bg"
