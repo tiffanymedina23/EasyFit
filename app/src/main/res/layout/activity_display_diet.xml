@@ -12,11 +12,60 @@
         android:layout_height="?actionBarSize"
         android:title="DIET PLAN" />
 
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="176dp"
+        android:layout_height="128dp"
+        android:layout_below="@id/diet_toolbar"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/easy_fit" />
+
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/caloriesTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="This is the Display Diet Activity."
-        android:layout_centerInParent="true"/>
+        android:layout_below="@id/logo"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="TOTAL CALORIES : 0000 CAL"
+        android:fontFamily="@font/archivo_black"
+        android:textSize="20sp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/fatTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/caloriesTV"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="00g FAT ................ (0000 CAL)"
+        android:fontFamily="@font/archivo_black"
+        android:textSize="20sp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/carbsTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fatTV"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:text="000g CARBS .......... (0000 CAL)"
+        android:fontFamily="@font/archivo_black"
+        android:textSize="20sp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/proteinTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/carbsTV"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:text="000g PROTEIN ....... (0000 CAL)"
+        android:fontFamily="@font/archivo_black"
+        android:textSize="20sp"
+        android:textColor="#000000" />
 
 </RelativeLayout>

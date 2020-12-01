@@ -20,11 +20,15 @@ public class DisplayExerciseActivity extends AppCompatActivity {
         getActionBar().setDisplayHomeAsUpEnabled(true);
         getActionBar().setDisplayShowHomeEnabled(true);
 
+        Bundle bundle = getIntent().getExtras();
+        final String username = bundle.getString("username");
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                Intent intent = new Intent(DisplayExerciseActivity.this, HomeActivity.class);
+                intent.putExtra("username", username);
+                startActivity(intent);
                 finish();
             }
         });

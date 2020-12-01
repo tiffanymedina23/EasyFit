@@ -12,6 +12,7 @@ import android.widget.Toast;
 public class HomeActivity extends AppCompatActivity {
     TextView greetingTextView;
     Button dietButton, exerciseButton, settingsButton;
+    String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +25,7 @@ public class HomeActivity extends AppCompatActivity {
         settingsButton = (Button) findViewById(R.id.settingsButton);
 
         Bundle bundle = getIntent().getExtras();
-        String username = bundle.getString("username");
+        username = bundle.getString("username");
 
         greetingTextView.setText("Welcome, " + username + "!");
 
@@ -32,21 +33,27 @@ public class HomeActivity extends AppCompatActivity {
         dietButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(HomeActivity.this, DisplayDietActivity.class));
+                Intent intent = new Intent(HomeActivity.this, DisplayDietActivity.class);
+                intent.putExtra("username", username);
+                startActivity(intent);
             }
         });
 
         exerciseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(HomeActivity.this, DisplayExerciseActivity.class));
+                Intent intent = new Intent(HomeActivity.this, DisplayExerciseActivity.class);
+                intent.putExtra("username", username);
+                startActivity(intent);
             }
         });
 
         settingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(HomeActivity.this, SettingsActivity.class));
+                Intent intent = new Intent(HomeActivity.this, SettingsActivity.class);
+                intent.putExtra("username", username);
+                startActivity(intent);
             }
         });
 

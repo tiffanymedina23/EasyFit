@@ -24,13 +24,13 @@ public class SigninActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signup);
+        setContentView(R.layout.activity_signin);
 
         username = (EditText) findViewById(R.id.ETName);
         email = (EditText) findViewById(R.id.ETEmail);
         password = (EditText) findViewById(R.id.ETPassword);
-        loginButton = (Button) findViewById(R.id.btnRegister);
-        signupTextView = (TextView) findViewById(R.id.alreadyLogin);
+        loginButton = (Button) findViewById(R.id.btnSignIn);
+        signupTextView = (TextView) findViewById(R.id.newAccount);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
