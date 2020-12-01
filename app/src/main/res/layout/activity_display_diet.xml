@@ -20,200 +20,52 @@
         android:layout_centerHorizontal="true"
         android:src="@drawable/easy_fit" />
 
-    <RelativeLayout
-        android:id="@+id/caloriesLayout"
+    <TextView
+        android:id="@+id/caloriesTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/logo"
-        android:layout_centerHorizontal="true">
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="TOTAL CALORIES : 0000 CAL"
+        android:fontFamily="@font/archivo_black"
+        android:textSize="20sp"
+        android:textColor="#000000" />
 
-        <TextView
-            android:id="@+id/totalCaloriesTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TOTAL CALORIES : "
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/archivo_black"
-            android:textSize="18sp"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/totalCaloriesTV2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/totalCaloriesTV"
-            android:text="0000"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/archivo_black"
-            android:textSize="18sp"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/totalCaloriesTV3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/totalCaloriesTV2"
-            android:text=" CAL"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/archivo_black"
-            android:textSize="18sp"
-            android:textColor="#000000" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/fatLayout"
+    <TextView
+        android:id="@+id/fatTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/caloriesLayout"
-        android:layout_marginTop="15dp"
-        android:layout_centerHorizontal="true">
+        android:layout_below="@id/caloriesTV"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="00g FAT ................ (0000 CAL)"
+        android:fontFamily="@font/archivo_black"
+        android:textSize="20sp"
+        android:textColor="#000000" />
 
-        <TextView
-            android:id="@+id/fatGramsTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="00"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/archivo_black"
-            android:textSize="18sp"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/gFatTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/fatGramsTV"
-            android:text="g FAT    ("
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/archivo_black"
-            android:textSize="18sp"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/fatCaloriesTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/gFatTV"
-            android:text="000"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/archivo_black"
-            android:textSize="18sp"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/cFatTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/fatCaloriesTV"
-            android:text=" CAL)"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/archivo_black"
-            android:textSize="18sp"
-            android:textColor="#000000" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/carbsLayout"
+    <TextView
+        android:id="@+id/carbsTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/fatLayout"
-        android:layout_marginTop="15dp"
-        android:layout_centerHorizontal="true">
+        android:layout_below="@id/fatTV"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:text="000g CARBS .......... (0000 CAL)"
+        android:fontFamily="@font/archivo_black"
+        android:textSize="20sp"
+        android:textColor="#000000" />
 
-        <TextView
-            android:id="@+id/carbsGramsTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="000"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/archivo_black"
-            android:textSize="18sp"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/gCarbsTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/carbsGramsTV"
-            android:text="g CARBS    ("
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/archivo_black"
-            android:textSize="18sp"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/carbsCaloriesTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/gCarbsTV"
-            android:text="0000"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/archivo_black"
-            android:textSize="18sp"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/cCarbsTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/carbsCaloriesTV"
-            android:text=" CAL)"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/archivo_black"
-            android:textSize="18sp"
-            android:textColor="#000000" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/proteinLayout"
+    <TextView
+        android:id="@+id/proteinTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/carbsLayout"
-        android:layout_marginTop="15dp"
-        android:layout_centerHorizontal="true">
-
-        <TextView
-            android:id="@+id/proteinGramsTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="000"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/archivo_black"
-            android:textSize="18sp"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/gProteinTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/proteinGramsTV"
-            android:text="g PROTEIN    ("
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/archivo_black"
-            android:textSize="18sp"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/proteinCaloriesTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/gProteinTV"
-            android:text="0000"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/archivo_black"
-            android:textSize="18sp"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/cProteinTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/proteinCaloriesTV"
-            android:text=" CAL)"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/archivo_black"
-            android:textSize="18sp"
-            android:textColor="#000000" />
-    </RelativeLayout>
+        android:layout_below="@id/carbsTV"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:text="000g PROTEIN ....... (0000 CAL)"
+        android:fontFamily="@font/archivo_black"
+        android:textSize="20sp"
+        android:textColor="#000000" />
 
 </RelativeLayout>
