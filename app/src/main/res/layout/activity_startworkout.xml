@@ -5,7 +5,7 @@
         android:layout_height="fill_parent"
         xmlns:tools="http://schemas.android.com/tools"
         android:orientation="vertical"
-        android:background="#001933"
+        android:background="#FFFFFF"
         tools:context=".StartWorkoutActivity">
 
 
@@ -20,7 +20,7 @@
         android:layout_marginBottom="-44dp"
         android:lineSpacingExtra="8dp"
         android:text="How-to"
-        android:textColor="#FFFFFF"
+        android:textColor="#000031"
         android:textSize="44dp" />
 
 
@@ -34,7 +34,7 @@
         android:layout_marginEnd="147dp"
         android:layout_marginBottom="190dp"
         android:text="00:00"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/colorPrimary"
         android:textSize="38sp" />
 
     <ImageView
@@ -60,7 +60,7 @@
         android:layout_marginTop="36dp"
         android:layout_marginEnd="36dp"
         android:layout_marginBottom="-202dp"
-        android:background="#25293E" />
+        android:background="@color/colorPrimary" />
 
     <LinearLayout
             android:id="@+id/fit"
@@ -87,7 +87,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/archivo_black"
                     android:text="Stretch Down"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorPrimary"
                     android:textSize="22sp"
                     tools:layout_editor_absoluteX="118dp"
                     tools:layout_editor_absoluteY="340dp" />
@@ -98,7 +98,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/bree_serif"
                     android:text="4 to 5 Minutes"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorPrimary"
                     android:textSize="22sp" />
             </LinearLayout>
 
@@ -144,9 +144,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="14dp"
         android:layout_marginTop="73dp"
-        android:fontFamily="@font/bree_serif"
+        android:fontFamily="@font/acme"
         android:text="Tuck your core in with your chin up, move up and down"
-        android:textColor="#FFFFFF"
+        android:textColor="#000031"
         android:textSize="22sp"
         tools:layout_editor_absoluteX="121dp"
         tools:layout_editor_absoluteY="453dp" />
@@ -161,7 +161,7 @@
         android:layout_marginTop="200dp"
         android:fontFamily="@font/bree_serif"
         android:text="4 to 5 Minutes"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/colorPrimary"
         android:textSize="22sp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="120dp"
@@ -176,9 +176,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="127dp"
         android:layout_marginTop="172dp"
-        android:fontFamily="@font/archivo_black"
+        android:fontFamily="@font/acme"
         android:text="Stretch Abs"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/colorPrimary"
         android:textSize="22sp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="121dp"
@@ -194,7 +194,7 @@
             android:layout_marginStart="-6dp"
             android:layout_marginEnd="0dp"
             android:layout_marginBottom="0dp"
-            android:background="#FF4500" />
+            android:background="#FF5B74" />
 
         <TextView
             android:id="@+id/btnexercise"
