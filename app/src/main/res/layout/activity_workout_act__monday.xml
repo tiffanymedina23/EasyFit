@@ -24,17 +24,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="26dp"
-        android:background="#25293E"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-         />
+
 
     <TextView
         android:id="@+id/intropage"
@@ -109,30 +99,7 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/fit1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="390dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/bgprogress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical">
-
-
-        </LinearLayout>
-
-
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/fit3"
@@ -306,8 +273,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="601dp"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="599dp"
         android:fontFamily="@font/bree_serif"
         android:text="4 to 5 Minutes"
         android:textColor="#FFFFFF"
@@ -323,7 +290,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="132dp"
+        android:layout_marginStart="118dp"
         android:layout_marginTop="573dp"
         android:fontFamily="@font/archivo_black"
         android:text="Yoga Pose"
@@ -363,7 +330,6 @@
         android:text="Stretch Arms"
         android:textColor="#FFFFFF"
         android:textSize="22sp"
-        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="121dp"
         tools:layout_editor_absoluteY="453dp" />
 
