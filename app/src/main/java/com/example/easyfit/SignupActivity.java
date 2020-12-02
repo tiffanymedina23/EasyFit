@@ -44,6 +44,7 @@ public class SignupActivity extends AppCompatActivity {
                 Uri mNewUri;
 
                 ContentValues mNewValues = new ContentValues();
+
                 mNewValues.put(MyContentProvider.COLUMN_USERNAME, username.getText().toString());
                 mNewValues.put(MyContentProvider.COLUMN_EMAIL, email.getText().toString());
                 mNewValues.put(MyContentProvider.COLUMN_PASSWORD, password.getText().toString());
