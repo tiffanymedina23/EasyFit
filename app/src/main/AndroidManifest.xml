@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".StartWorkoutActivity"></activity>
+        <activity android:name=".WorkoutTuesdayActivity"></activity>
+        <activity android:name=".EditAct" />
+        <activity android:name=".StartWorkoutActivity" />
         <activity android:name=".WorkoutAct_Monday" />
 
         <provider

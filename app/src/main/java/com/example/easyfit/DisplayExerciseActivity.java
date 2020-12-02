@@ -17,6 +17,7 @@ public class DisplayExerciseActivity extends AppCompatActivity {
         setContentView(R.layout.activity_display_exercise);
 
         LinearLayout buttonMonday = (LinearLayout) findViewById(R.id.layout);
+        LinearLayout buttonTuesday = (LinearLayout) findViewById(R.id.layout_tuesday);
         Toolbar toolbar = (Toolbar) findViewById(R.id.exercise_toolbar);
         setActionBar(toolbar);
 
@@ -44,6 +45,14 @@ public class DisplayExerciseActivity extends AppCompatActivity {
                 startActivity(a);
             }
         });
+        buttonTuesday.setOnClickListener(new View.OnClickListener(){
 
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(DisplayExerciseActivity.this, WorkoutTuesdayActivity.class);
+                a.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(a);
+            }
+        });
     }
 }

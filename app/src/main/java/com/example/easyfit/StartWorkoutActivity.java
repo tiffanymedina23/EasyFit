@@ -40,7 +40,7 @@ public class StartWorkoutActivity extends AppCompatActivity {
         } .start();
         mTimerRunning = true;
     }
-    
+
     private void updateCountDownText(){
         int minutes = (int) (mTimeLeftInMillis / 1000) / 60;
         int seconds = (int) (mTimeLeftInMillis / 1000) % 60;
