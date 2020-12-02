@@ -25,4 +25,7 @@
     <string name="login_failed">"Login failed"</string>
     <string name="don_t_have_an_account_sign_up">DON\'T HAVE AN ACCOUNT? <u>SIGN UP</u></string>
     <string name="already_have_an_account_login">ALREADY HAVE AN ACCOUNT? <u>LOGIN</u></string>
+    <string name="body_exercises">Easy Stretch</string>
+    <string name="continue_the_workout_into_get_maximum_result">Continue the workout into get maximum result</string>
+    <string name="start_exercise">START EXERCISE</string>
 </resources>
