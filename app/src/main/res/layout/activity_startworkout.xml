@@ -19,7 +19,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="-44dp"
         android:lineSpacingExtra="8dp"
-        android:text="How -to"
+        android:text="How-to"
         android:textColor="#FFFFFF"
         android:textSize="44dp" />
 
@@ -133,7 +133,6 @@
         android:src="@drawable/fitness_girl"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp" />
 
     <TextView
@@ -195,7 +194,7 @@
             android:layout_marginStart="-6dp"
             android:layout_marginEnd="0dp"
             android:layout_marginBottom="0dp"
-            android:background="@color/colorPrimary" />
+            android:background="#FF4500" />
 
         <TextView
             android:id="@+id/btnexercise"
@@ -207,7 +206,7 @@
             android:layout_marginStart="-6dp"
             android:layout_marginEnd="0dp"
             android:layout_marginBottom="0dp"
-            android:text="@string/start_exercise"
+            android:text="@string/next_workout"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="22sp" />

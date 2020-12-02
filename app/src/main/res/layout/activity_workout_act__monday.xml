@@ -235,7 +235,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="294dp"
         android:layout_marginBottom="202dp"
-        android:src="@drawable/fit_arm"
+        android:src="@drawable/fitness_arm"
         tools:layout_editor_absoluteX="4dp"
         tools:layout_editor_absoluteY="323dp" />
 

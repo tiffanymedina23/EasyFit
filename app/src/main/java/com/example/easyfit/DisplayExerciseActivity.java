@@ -5,15 +5,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.Toolbar;
 
 public class DisplayExerciseActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_exercise);
 
+        LinearLayout buttonMonday = (LinearLayout) findViewById(R.id.layout);
         Toolbar toolbar = (Toolbar) findViewById(R.id.exercise_toolbar);
         setActionBar(toolbar);
 
@@ -30,6 +33,15 @@ public class DisplayExerciseActivity extends AppCompatActivity {
                 intent.putExtra("username", username);
                 startActivity(intent);
                 finish();
+            }
+        });
+
+       buttonMonday.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(DisplayExerciseActivity.this, WorkoutAct_Monday.class);
+                startActivity(a);
             }
         });
 
