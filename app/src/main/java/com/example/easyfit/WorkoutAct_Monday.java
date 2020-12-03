@@ -16,7 +16,9 @@ public class WorkoutAct_Monday extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout_act__monday);
 
-        btnexercise.setOnClickListener(new View.OnClickListener(){
+        btnexercise = (TextView) findViewById(R.id.btnexercise);
+
+       btnexercise.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
@@ -25,5 +27,6 @@ public class WorkoutAct_Monday extends AppCompatActivity {
                 startActivity(a);
             }
         });
+
     }
 }

@@ -130,7 +130,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="13dp"
         android:layout_marginBottom="477dp"
-        android:src="@drawable/fitness_girl"
+        android:src="@drawable/fitness_str8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp" />
