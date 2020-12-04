@@ -3,6 +3,7 @@ package com.example.easyfit;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -12,6 +13,7 @@ public class DisplayDietActivity extends AppCompatActivity {
     Integer gender, pounds, feet, inches, age, height, calories, fatGrams, carbsGrams, proteinGrams, fatCalories, carbsCalories, proteinCalories;
     Double bmr;
     TextView caloriesTV, fatTV, carbsTV, proteinTV;
+    Cursor mCursor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,12 +41,32 @@ public class DisplayDietActivity extends AppCompatActivity {
 
         //get user's data (user sample data for now)
 
+        String[] mProjection =
+                {
+                        MyContentProvider.COLUMN_AGE,
+                        MyContentProvider.COLUMN_WEIGHT,
+                        MyContentProvider.COLUMN_FEET,
+                        MyContentProvider.COLUMN_INCHES,
+                        MyContentProvider.COLUMN_GOAL,
+                        MyContentProvider.COLUMN_SEX
+                };
+
+        String selectionClause = MyContentProvider.COLUMN_USERNAME + " = " + username;
+
+        mCursor = getContentResolver().query(MyContentProvider.CONTENT_URI, mProjection, selectionClause, null, null);
+
+        if(mCursor != null && mCursor.getCount()>0){
+            mCursor.moveToNext();
+
+
+        }
+
         //sample data for 6' 200lb male
-        gender = 0;
-        pounds = 200;
-        feet = 6;
-        inches = 0;
-        age = 20;
+        gender = Integer.parseInt(mCursor.getString(5));
+        pounds = Integer.parseInt(mCursor.getString(1));
+        feet = Integer.parseInt(mCursor.getString(2));
+        inches = Integer.parseInt(mCursor.getString(3));
+        age = Integer.parseInt(mCursor.getString(0));
 
         //convert height
         height = (12 * feet) + inches;
@@ -79,12 +101,5 @@ public class DisplayDietActivity extends AppCompatActivity {
         fatTV.setText(fatGrams + "g FAT ................ (" + fatCalories + " CAL)");
         carbsTV.setText(carbsGrams + "g CARBS .......... (" + carbsCalories + " CAL)");
         proteinTV.setText(proteinGrams + "g PROTEIN ....... (" + proteinCalories + " CAL)");
-
-
-
-
-
-
-
     }
 }

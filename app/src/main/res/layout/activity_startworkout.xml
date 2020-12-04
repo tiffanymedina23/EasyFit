@@ -23,7 +23,6 @@
         android:textColor="#000031"
         android:textSize="44dp" />
 
-
     <TextView
         android:id="@+id/timerValue"
         android:layout_width="100dp"

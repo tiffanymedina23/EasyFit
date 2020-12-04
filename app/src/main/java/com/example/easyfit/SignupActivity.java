@@ -34,6 +34,7 @@ public class SignupActivity extends AppCompatActivity {
         username = (EditText) findViewById(R.id.ETName);
         email = (EditText) findViewById(R.id.ETEmail);
         password = (EditText) findViewById(R.id.ETPassword);
+
         signupButton = (Button) findViewById(R.id.btnRegister);
         loginTextView = (TextView) findViewById(R.id.alreadyLogin);
 
@@ -45,17 +46,16 @@ public class SignupActivity extends AppCompatActivity {
 
                 ContentValues mNewValues = new ContentValues();
 
-                mNewValues.put(MyContentProvider.COLUMN_USERNAME, username.getText().toString());
-                mNewValues.put(MyContentProvider.COLUMN_EMAIL, email.getText().toString());
-                mNewValues.put(MyContentProvider.COLUMN_PASSWORD, password.getText().toString());
+                mNewValues.put(MyContentProvider.COLUMN_USERNAME, username.getText().toString().trim());
+                mNewValues.put(MyContentProvider.COLUMN_EMAIL, email.getText().toString().trim());
+                mNewValues.put(MyContentProvider.COLUMN_PASSWORD, password.getText().toString().trim());
 
-                mNewUri = getContentResolver().insert(
-                        MyContentProvider.CONTENT_URI, mNewValues);
+                mNewUri = getContentResolver().insert(MyContentProvider.CONTENT_URI, mNewValues);
+
+                clear();
 
                 Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                 intent.putExtra("username", username.getText().toString());
-                intent.putExtra("email", email.getText().toString());
-                intent.putExtra("password", password.getText().toString());
                 startActivity(intent);
             }
         });
@@ -67,4 +67,11 @@ public class SignupActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void clear() {
+        username.setText("");
+        email.setText("");
+        password.setText("");
+    }
+
 }

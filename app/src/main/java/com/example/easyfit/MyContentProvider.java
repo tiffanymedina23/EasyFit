@@ -3,13 +3,14 @@ package com.example.easyfit;
 import android.content.ContentProvider;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.UriMatcher;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
 
 public class MyContentProvider extends ContentProvider {
-    public final static String DBNAME = "UsersDatabase";
+    public final static String DBNAME = "EasyFitDatabase";
     public final static String TABLE_USERSTABLE = "userstable";
     public final static String COLUMN_USERNAME = "username";
     public final static String COLUMN_EMAIL = "email";
@@ -20,30 +21,34 @@ public class MyContentProvider extends ContentProvider {
     public final static String COLUMN_INCHES = "inches";
     public final static String COLUMN_WEIGHT = "weight";
     public final static String COLUMN_GOAL = "goal";
+
+    public static final String AUTHORITY = "com.example.easyfit.provider";
+    public static final Uri CONTENT_URI = Uri.parse("content://com.example.easyfit.provider/" + TABLE_USERSTABLE);
+
+    private static UriMatcher sUriMatcher;
+    private MainDatabaseHelper mOpenHelper;
+
     private static final String SQL_CREATE_MAIN = "CREATE TABLE " +
             TABLE_USERSTABLE +
             "(" +
-            " _ID INTEGER PRIMARY KEY, " +
             COLUMN_USERNAME +
-            "TEXT," +
+            " TEXT PRIMARY KEY, " +
             COLUMN_EMAIL +
-            "TEXT," +
+            " TEXT," +
             COLUMN_PASSWORD +
-            "TEXT," +
+            " TEXT," +
             COLUMN_AGE +
-            "TEXT," +
+            " TEXT," +
             COLUMN_SEX +
-            "TEXT," +
+            " TEXT," +
             COLUMN_FEET +
-            "TEXT," +
+            " TEXT," +
             COLUMN_INCHES +
-            "TEXT," +
+            " TEXT," +
             COLUMN_WEIGHT +
-            "TEXT," +
+            " TEXT," +
             COLUMN_GOAL +
-            "TEXT)";
-    public static final Uri CONTENT_URI = Uri.parse("content://com.example.easyfit.provider/" + TABLE_USERSTABLE);
-    private MainDatabaseHelper mOpenHelper;
+            " TEXT)";
 
     @Override
     public boolean onCreate() {
@@ -53,19 +58,11 @@ public class MyContentProvider extends ContentProvider {
 
     @Override
     public Uri insert(Uri uri, ContentValues values) {
-        /*
-        String username = values.getAsString(COLUMN_USERNAME);
-        String email = values.getAsString(COLUMN_EMAIL);
-        String password = values.getAsString(COLUMN_PASSWORD);
-        Integer age = values.getAsInteger(COLUMN_AGE);
-        Integer sex = values.getAsInteger(COLUMN_SEX);
-        Integer feet = values.getAsInteger(COLUMN_FEET);
-        Integer inches = values.getAsInteger(COLUMN_INCHES);
-        Integer weight = values.getAsInteger(COLUMN_WEIGHT);
-        Integer goal = values.getAsInteger(COLUMN_GOAL);
-         */
-        long id = mOpenHelper.getWritableDatabase()
-                .insert(TABLE_USERSTABLE, null, values);
+        String username = values.getAsString(COLUMN_USERNAME).trim();
+        String email = values.getAsString(COLUMN_EMAIL).trim();
+        String password = values.getAsString(COLUMN_PASSWORD).trim();
+
+        long id = mOpenHelper.getWritableDatabase().insert(TABLE_USERSTABLE, null, values);
 
         return Uri.withAppendedPath(CONTENT_URI, "" + id);
     }

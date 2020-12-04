@@ -16,12 +16,25 @@
         android:backgroundTintMode="multiply"
         app:srcCompat="@drawable/easy_fit1" />
 
+    <TextView
+        android:id="@+id/incorrectInputTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/IVLogo"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="30dp"
+        android:text="The email or password is invalid. Please try again."
+        android:textColor="#FF0000"
+        android:textSize="14sp"
+        android:visibility="invisible"/>
+
     <EditText
         android:id="@+id/ETName"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/IVLogo"
-        android:layout_marginTop="50dp"
+        android:layout_below="@+id/incorrectInputTV"
+        android:layout_marginTop="20dp"
         android:layout_weight="1"
         android:background="@drawable/field_bg"
         android:drawableLeft="@drawable/icon_feather_user"

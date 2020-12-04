@@ -16,17 +16,14 @@ public class WorkoutAct_Monday extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout_act__monday);
 
-        btnexercise = (TextView) findViewById(R.id.btnexercise);
+        btnexercise = (TextView)findViewById(R.id.btnexercise);
 
-       btnexercise.setOnClickListener(new View.OnClickListener(){
-
+        btnexercise.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent a = new Intent(WorkoutAct_Monday.this, StartWorkoutActivity.class);
-                a.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                startActivity(a);
+                Intent intent = new Intent(getApplicationContext(), StartWorkoutActivity.class);
+                startActivity(intent);
             }
         });
-
     }
 }
